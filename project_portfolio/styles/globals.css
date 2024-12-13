@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+}
+
+@font-face {
+    font-family: 'Chap-Regular'; 
+    src: url('/fonts/Chap-Regular.ttf') format('truetype'); /* File path relative to the public folder */
+    font-weight: 400; /* Normal weight */
+    font-style: normal;
+  }
+
+  /* globals.css */
+
+/* Define font classes */
+.font-anton {
+  font-family: 'Anton', sans-serif;
+}
+.font-rubik-glitch {
+  font-family: 'Rubik Glitch', cursive;
+}
+.font-rubik-vinyl {
+  font-family: 'Rubik Vinyl', cursive;
+}
+
