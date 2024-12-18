@@ -8,7 +8,7 @@ const PageOne = () => {
   return (
     <div className="w-full bg-[#d9d9d9] flex flex-col">
         <div className="flex justify-end p-4">
-          <Button onClick={() => { }}>Contact</Button>
+          <Button onClick={() => { }}>Book Me</Button>
         </div>
       <div className="flex flex-col h-screen justify-center items-center ">
    
@@ -41,7 +41,7 @@ const PageOne = () => {
           </div>
 
           {/* Responsive Text Below */}
-          <div className="flex justify-center">
+          <div className="flex justify-center relative bottom-10">
             <p
               className="font-rubikGlitch text-black m-0 p-0 text-6xl lg:text-9xl"
               style={{
@@ -63,7 +63,7 @@ const PageOne = () => {
                 lineHeight: "1",
               }}
             >
-              SLEIGHT OF HAND ARTIST
+              MAGICIAN/SLEIGHT OF HAND ARTIST
             </p>
           </div>
         </div>
