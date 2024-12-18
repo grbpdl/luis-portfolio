@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Chap-Regular'; 
+    src: url('/fonts/Chap-Regular.ttf') format('truetype'); /* File path relative to the public folder */
+    font-weight: 400; /* Normal weight */
+    font-style: normal;
+  }
