@@ -25,7 +25,7 @@ const PageTwo = () => {
             lineHeight: "1.6",
           }}
         >
-          Luis's signature style blends masterful sleight of hand, magic,
+          Luis&apos;s signature style blends masterful sleight of hand, magic,
           mentalism, improv comedy, and dynamic audience interaction into a
           captivating theatrical experience. His performances are unpredictable,
           funny, and packed with hard-hitting moments.

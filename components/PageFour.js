@@ -46,8 +46,8 @@ const PageFour = () => {
         <div className="flex flex-col gap-6">
           <h2 className="text-3xl font-semibold font-chapFont">Stage Show</h2>
           <p className="font-chapFont text-xl leading-relaxed">
-            Luis's platform performances are for groups of 15 to 1,000 and can
-            range from 10 to 70 minutes. David’s program is predominantly
+            Luis&apos;s platform performances are for groups of 15 to 1,000 and can
+            range from 10 to 70 minutes. David&apos;s program is predominantly
             mentalism — mindreading, influence, predictions — magic that
             appeals to the savvy modern audience. His program is highly
             interactive, with countless audience members participating from
@@ -83,7 +83,7 @@ const PageFour = () => {
         <div className="relative bg-gray-800 text-white p-6 rounded-lg shadow-lg">
           {/* Testimonial Content */}
           <p className="text-xl italic text-center">
-            "{testimonials[currentTestimonial].quote}"
+          &quot;{testimonials[currentTestimonial].quote}&quot;
           </p>
           <p className="text-lg font-semibold text-center mt-4">
             - {testimonials[currentTestimonial].author}
