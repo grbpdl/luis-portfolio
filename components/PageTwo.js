@@ -1,16 +1,8 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const PageTwo = () => {
   const [hoveredImage, setHoveredImage] = useState(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHoveredImage((prev) => (prev === 9 ? 0 : prev + 1));
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="w-full bg-[#2b2b2b] min-h-screen flex flex-col items-center">
@@ -33,40 +25,64 @@ const PageTwo = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="w-full flex flex-wrap justify-center items-center px-6 py-6 gap-4 relative">
+      <div className="w-full flex flex-col items-center px-6 py-6 gap-4 relative">
         {/* Gallery Grid */}
-        <div className="flex-1 grid grid-cols-5 gap-2 max-w-[70%]">
-          {[...Array(10)].map((_, idx) => (
-            <div
-              key={idx}
-              className={`relative w-full pb-[100%] overflow-hidden rounded-lg animate-image-slide hover:translate-x-4 ${
-                hoveredImage === idx ? "scale-110" : ""
-              }`}
-              style={{ animationDelay: `${idx * 0.2}s` }}
-            >
-              <Image
-                src={`/photos/image_${idx + 1}.jpg`} // Replace with actual paths
-                alt={`Gallery image ${idx + 1}`}
-                layout="fill"
-                objectFit="cover"
-                sizes="(max-width: 1024px) 50vw, 20vw"
-                className="rounded-lg transition-transform duration-0 ease-in-out"
-              />
-            </div>
-          ))}
+        <div className="flex flex-col gap-4 w-full overflow-hidden">
+          <div className="grid grid-cols-5 gap-2 animate-scroll-row">
+            {[...Array(10)].map((_, idx) => (
+              <div
+                key={idx}
+                className={`relative w-full pb-[100%] overflow-hidden rounded-lg ${
+                  hoveredImage === idx ? "scale-110" : ""
+                }`}
+                onMouseEnter={() => setHoveredImage(idx)}
+                onMouseLeave={() => setHoveredImage(null)}
+              >
+                <Image
+                  src={`/photos/image_${idx + 1}.jpg`} // Replace with actual paths
+                  alt={`Gallery image ${idx + 1}`}
+                  layout="fill"
+                  objectFit="cover"
+                  sizes="(max-width: 1024px) 50vw, 20vw"
+                  className="rounded-lg transition-transform duration-300 ease-in-out"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-5 gap-2 animate-scroll-row-reverse">
+            {[...Array(10)].map((_, idx) => (
+              <div
+                key={idx}
+                className={`relative w-full pb-[100%] overflow-hidden rounded-lg ${
+                  hoveredImage === idx ? "scale-110" : ""
+                }`}
+                onMouseEnter={() => setHoveredImage(idx)}
+                onMouseLeave={() => setHoveredImage(null)}
+              >
+                <Image
+                  src={`/photos/image_${idx + 1}.jpg`} // Replace with actual paths
+                  alt={`Gallery image ${idx + 1}`}
+                  layout="fill"
+                  objectFit="cover"
+                  sizes="(max-width: 1024px) 50vw, 20vw"
+                  className="rounded-lg transition-transform duration-300 ease-in-out"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Main Overlay Image */}
-        <div className="relative w-50 h-50 md:w-96 md:h-96 animate-overlay-spin ">
-        <Image
-  src={`/overlay.png`} // Replace with actual overlay image path
-  alt={`Overlay image`}
-  width={400}
-  height={400}
-  style={{ width: "100%", height: "auto" }}
-  objectFit="contain"
-  className="rounded-lg transition-transform duration-700 ease-in-out hover:scale-110"
-/>
+        <div className="relative w-50 h-50 md:w-96 md:h-96 animate-overlay-spin hidden md:block">
+          <Image
+            src={`/overlay.png`} // Replace with actual overlay image path
+            alt={`Overlay image`}
+            width={400}
+            height={400}
+            style={{ width: "100%", height: "auto" }}
+            objectFit="contain"
+            className="rounded-lg transition-transform duration-700 ease-in-out hover:scale-110"
+          />
         </div>
       </div>
     </div>
@@ -75,22 +91,32 @@ const PageTwo = () => {
 
 export default PageTwo;
 
-/* CSS Animations (Add these to your global CSS file) */
+/* CSS Animations (Add these to your global CSS file or use Tailwind CSS custom utilities) */
 <style jsx>{`
-  @keyframes image-slide {
+  @keyframes scroll-row {
     0% {
       transform: translateX(0);
     }
-    50% {
-      transform: translateX(10px);
-    }
     100% {
-      transform: translateX(0);
+      transform: translateX(-100%);
     }
   }
 
-  .animate-image-slide {
-    animation: image-slide 1s infinite ease-in-out;
+  @keyframes scroll-row-reverse {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-scroll-row {
+    animation: scroll-row 10s linear infinite;
+  }
+
+  .animate-scroll-row-reverse {
+    animation: scroll-row-reverse 10s linear infinite;
   }
 
   @keyframes overlay-spin {

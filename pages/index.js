@@ -10,7 +10,7 @@ import PageFive from "@/components/PageFive";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-0 overflow-hidden">
+    <div className="flex flex-col gap-0 overflow-hidden bg-[#2b2b2b]">
       <PageOne />
       <hr className="border border-white" />
       {/* new page ............................................................................................................ */}

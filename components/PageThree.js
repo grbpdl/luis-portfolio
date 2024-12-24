@@ -1,17 +1,18 @@
 import React from "react";
 import Image from "next/image";
+import VideoPlayer from "./VideoPlayer";
 
 const PageThree = () => {
   return (
-    <div className="relative w-full bg-[#2b2b2b] text-white min-h-screen flex flex-col justify-center items-center">
+    <div className="relative w-full bg-[#2b2b2b] text-white min-h-screen flex flex-col justify-center items-center md:m-20 ">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 ">
         <Image
           src="/photos/image_8.jpg" // Replace with your image path
           alt="Background Image"
           layout="fill"
           objectFit="cover"
-          className="opacity-60"
+          className="opacity-60 rounded-2xl"
         />
       </div>
 
@@ -55,15 +56,8 @@ const PageThree = () => {
         
       </div>
       <div className="flex justify-center mt-12">
-          <div className="relative w-72 h-48 rounded-lg overflow-hidden shadow-lg">
-            <video
-              src="/your-video.mp4" // Replace with your video path
-              controls
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-        
+<VideoPlayer/>
+</div>
     </div>
   );
 };
