@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { CiFacebook,CiLinkedin  } from "react-icons/ci";
+import { CiFacebook,CiYoutube  } from "react-icons/ci";
 import { FaInstagram,FaTiktok } from "react-icons/fa";
 const PageFive = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
+    phone:'',
   });
   const [status, setStatus] = useState('');
   const [loading, setLoading] = useState(false);
@@ -23,6 +24,7 @@ const PageFive = () => {
     setError('');
 
     try {
+      console.log(formData)
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -47,7 +49,7 @@ const PageFive = () => {
   return (
     <div className="flex flex-col items-center w-full bg-[#2b2b2b] min-h-screen text-white p-10">
       {/* Contact Form Section */}
-      <div className="w-full max-w-3xl bg-gray-800 p-8 rounded-lg shadow-lg mb-12">
+      <div className="w-full max-w-3xl bg-[#1f2a38] p-8 rounded-lg shadow-lg mb-12">
         <h2 className="text-3xl font-bold mb-6 text-center font-chapFont">Contact Me</h2>
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Name Field */}
@@ -63,6 +65,22 @@ const PageFive = () => {
               placeholder="Your Name"
               className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
+            />
+          </div>
+          {/* Phone Field */}
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium mb-2">
+              Phone
+            </label>
+            <input
+              type="number"
+              id="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Your Phone Number"
+              className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+              step={0}
             />
           </div>
 
@@ -171,12 +189,12 @@ const PageFive = () => {
            <FaInstagram />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-700 transition duration-300"
           >
-            <CiLinkedin />
+            <CiYoutube />
           </a>
         </div>
 

@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name, email, message } = req.body;
+    const { name, email, message,phone } = req.body;
 
     try {
       // Configure Nodemailer
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         from: email,
         to: process.env.EMAIL_USER, // Replace with your email
         subject: `New Contact Form Submission from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        text: `Name: ${name}\nEmail: ${email}\n Phone:${phone}\nMessage: ${message}`,
       };
 
       // Send Email

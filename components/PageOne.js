@@ -14,10 +14,10 @@ const PageOne = () => {
    
 
         {/* Main Content */}
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center">
           {/* Main Text with Dynamic Image */}
           <div className="flex items-center justify-center font-anton font-bold text-[#2b2b2b]">
-            <div className="flex flex-grow justify-center items-center">
+            <div className="flex flex-grow justify-center items-center px-5">
               {/* "LU" */}
               <div className="flex items-center">
                 <p className="m-0 text-[60vw] md:text-[30vw] leading-none ">LU</p>
@@ -41,9 +41,9 @@ const PageOne = () => {
           </div>
 
           {/* Responsive Text Below */}
-          <div className="flex justify-center relative bottom-7 w-full">
+          <div className="flex justify-center relative bottom-7 w-full md:bottom-12">
             <p
-              className="font-rubikGlitch text-black m-0 p-0 text-6xl lg:text-9xl "
+              className="font-rubikGlitch text-black m-0 p-0 text-6xl md:text-9xl"
               style={{
                 textShadow:
                   "0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.4)",
