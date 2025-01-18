@@ -4,7 +4,6 @@ import PageOne from "@/components/PageOne";
 import PageThree from "@/components/PageThree";
 import PageTwo from "@/components/PageTwo";
 
-// this is comment
 
 export default function Home() {
   return (
