@@ -4,11 +4,16 @@ import Image from "next/image";
 
 const PageOne = () => {
   const imageSource = "/luis_i.png"; // Your dynamic image source
-
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight, // Scroll to the end of the page
+      behavior: "smooth", // Smooth scrolling animation
+    });
+  };
   return (
     <div className="w-full bg-[#d9d9d9] flex flex-col">
         <div className="flex justify-end m-4">
-          <Button onClick={() => { }}>BOOK LUIS</Button>
+          <Button onClick={scrollToBottom}>BOOK LUIS</Button>
         </div>
       <div className="flex flex-col h-screen justify-center items-center ">
    

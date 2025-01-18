@@ -78,9 +78,9 @@ const PageFive = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Your Phone Number"
-              className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
               required
-              step={0}
+              onWheel={(e) => e.target.blur()}
             />
           </div>
 
