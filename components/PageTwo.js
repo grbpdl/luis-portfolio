@@ -5,7 +5,7 @@ const PageTwo = () => {
   const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
-    <div className="w-full bg-[#2b2b2b] min-h-screen flex flex-col items-center">
+    <div className="w-full bg-[#2b2b2b] min-h-screen flex flex-col items-center relative">
       {/* Paragraph Section */}
       <div className="px-6 py-8 text-center">
         <p
@@ -25,10 +25,10 @@ const PageTwo = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="w-full flex flex-col items-center px-6 py-6 gap-4 relative">
+      <div className="w-full flex  items-center px-6 py-6 gap-4">
         {/* Gallery Grid */}
-        <div className="flex flex-col gap-4 w-full overflow-hidden">
-          <div className="grid grid-cols-5 gap-2 animate-scroll-row">
+        <div className="flex flex-col gap-4 w-full overflow-hidden ">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-2  animate-scroll-row">
             {[...Array(10)].map((_, idx) => (
               <div
                 key={idx}
@@ -49,7 +49,7 @@ const PageTwo = () => {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-5 gap-2 animate-scroll-row-reverse">
+          {/* <div className="grid grid-cols-5 gap-2 animate-scroll-row-reverse">
             {[...Array(10)].map((_, idx) => (
               <div
                 key={idx}
@@ -69,11 +69,11 @@ const PageTwo = () => {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Main Overlay Image */}
-        <div className="relative w-50 h-50 md:w-96 md:h-96 animate-overlay-spin hidden md:block">
+        <div className=" w-50 h-50 md:w-96 md:h-full animate-overlay-spin hidden md:block ">
           <Image
             src={`/overlay.png`} // Replace with actual overlay image path
             alt={`Overlay image`}

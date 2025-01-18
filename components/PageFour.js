@@ -53,11 +53,6 @@ const PageFour = () => {
             interactive, with countless audience members participating from
             their seat and the stage.
           </p>
-        </div>
-
-        {/* Image & Additional Content Section */}
-        <div className="flex flex-col gap-6 items-center">
-          {/* Image Placeholder */}
           <div className="w-full h-64 bg-gray-700 rounded-lg overflow-hidden shadow-lg">
             <img
               src="/photos/image_17.jpg" // Replace with your actual image
@@ -65,17 +60,25 @@ const PageFour = () => {
               className="w-full h-full object-cover"
             />
           </div>
-
-          {/* Additional Section */}
-          <h2 className="text-2xl font-semibold font-chapFont text-center">
-            Strolling & Close-Up Magic
-          </h2>
-          <p className="font-chapFont text-center text-lg">
-            A captivating magic experience delivered directly to small groups or
-            individual audience members. Perfect for intimate gatherings or
-            enhancing the ambiance of larger events.
-          </p>
         </div>
+        <div className="flex flex-col gap-6">
+          <h2 className="text-3xl font-semibold font-chapFont">Strolling & Close-Up Magic
+          </h2>
+          <p className="font-chapFont text-xl leading-relaxed">
+          Luis&apos;s strolling magic is ideal for events that demand seamless entertainment, such as restaurants, corporate gatherings, and cocktail hours. He effortlessly captivates small groups with his impressive magic, creating a moment to remember. In more intimate settings, Luis can also present a close-up magic show, ensuring that every guest is fully engaged. As a master sleight-of-hand artist, Luis leaves a lasting impression, whether performing up close or mingling with the crowd, giving guests a moment to remember.
+
+          </p>
+          <div className="w-full h-64 bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/photos/image_17.jpg" // Replace with your actual image
+              alt="Stage Performance"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+
+
       </div>
 
       {/* Testimonials Section */}

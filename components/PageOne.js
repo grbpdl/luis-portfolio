@@ -7,8 +7,8 @@ const PageOne = () => {
 
   return (
     <div className="w-full bg-[#d9d9d9] flex flex-col">
-        <div className="flex justify-end p-4">
-          <Button onClick={() => { }}>Book Me</Button>
+        <div className="flex justify-end m-4">
+          <Button onClick={() => { }}>BOOK LUIS</Button>
         </div>
       <div className="flex flex-col h-screen justify-center items-center ">
    
@@ -41,9 +41,9 @@ const PageOne = () => {
           </div>
 
           {/* Responsive Text Below */}
-          <div className="flex justify-center relative bottom-10">
+          <div className="flex justify-center relative bottom-7 w-full">
             <p
-              className="font-rubikGlitch text-black m-0 p-0 text-6xl lg:text-9xl"
+              className="font-rubikGlitch text-black m-0 p-0 text-6xl lg:text-9xl "
               style={{
                 textShadow:
                   "0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.4)",
@@ -56,10 +56,10 @@ const PageOne = () => {
           {/* Sleight of Hand Artist Text */}
           <div className="pb-12 flex justify-center items-center">
             <p
-              className="font-rubikVinyl text-[#004aad] m-0 p-0 text-2xl md:text-4xl pb-8"
+              className="font-rubikVinyl text-[#004aad] m-0 p-0 text-lg md:text-4xl pb-8 text-center font-semibold relative bottom-7"
               style={{
                 textShadow:
-                  "0 0 10px rgba(0 ,74, 173, 0.8), 0 0 20px rgba(0 ,74 ,173, 0.6), 0 0 30px rgba(0 ,74 ,173, 0.4)",
+                  "0 0 10px rgba(0 ,74, 173, 0.7), 0 0 20px rgba(0 ,74 ,173, 0.6), 0 0 30px rgba(0 ,74 ,173, 0.4)",
                 lineHeight: "1",
               }}
             >

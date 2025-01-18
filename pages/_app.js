@@ -26,7 +26,7 @@ const rubikVinyl = Rubik_Vinyl({
 
 export default function App({ Component, pageProps }) {
   return(
-  <main className={`${anton.variable} ${rubikGlitch.variable} ${rubikVinyl.variable}`}>
+  <main className={`${anton.variable} ${rubikGlitch.variable} ${rubikVinyl.variable} bg-[#2b2b2b]`}>
    <Component {...pageProps} />;
   </main>
   )

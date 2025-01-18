@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { CiFacebook,CiLinkedin  } from "react-icons/ci";
+import { FaInstagram,FaTiktok } from "react-icons/fa";
 const PageFive = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -151,15 +152,15 @@ const PageFive = () => {
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-300"
           >
-            <i className="fab fa-facebook"></i>
+           <CiFacebook />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://tiktok.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-400 transition duration-300"
           >
-            <i className="fab fa-twitter"></i>
+            <FaTiktok />
           </a>
           <a
             href="https://instagram.com"
@@ -167,7 +168,7 @@ const PageFive = () => {
             rel="noopener noreferrer"
             className="hover:text-pink-500 transition duration-300"
           >
-            <i className="fab fa-instagram"></i>
+           <FaInstagram />
           </a>
           <a
             href="https://linkedin.com"
@@ -175,7 +176,7 @@ const PageFive = () => {
             rel="noopener noreferrer"
             className="hover:text-blue-700 transition duration-300"
           >
-            <i className="fab fa-linkedin"></i>
+            <CiLinkedin />
           </a>
         </div>
 
