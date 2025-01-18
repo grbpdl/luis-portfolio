@@ -10,10 +10,10 @@ export default function Home() {
     <div className="flex flex-col gap-0 overflow-hidden bg-[#2b2b2b]">
       <PageOne />
 
-      <PageTwo />
 
       <PageThree />
       <PageFour />
+      <PageTwo />
 
       <PageFive />
     </div>
