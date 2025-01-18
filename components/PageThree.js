@@ -20,8 +20,8 @@ const PageThree = () => {
         character of the person he wishes to be in real life.
       </p>
       <p className="mb-6 text-lg">
-        Recognized as Nepal's finest sleight-of-hand artist, Luis quickly became the president of
-        the Nepal Brotherhood of Magicians, the country's only organization dedicated to
+        Recognized as Nepal &apos;s finest sleight-of-hand artist, Luis quickly became the president of
+        the Nepal Brotherhood of Magicians, the country&apos;s only organization dedicated to
         magicians. His passion for the craft has fostered a strong sense of responsibility toward
         shaping the future of magic and live performances in Nepal.
       </p>
