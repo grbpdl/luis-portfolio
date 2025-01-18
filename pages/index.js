@@ -1,12 +1,10 @@
-import Image from "next/image";
-import FullScreenImageGallery from "@/components/Images";
-import PageOne from "@/components/PageOne";
-import PageTwo from "@/components/PageTwo";
-import PageThree from "@/components/PageThree";
-import PageFour from "@/components/PageFour";
 import PageFive from "@/components/PageFive";
+import PageFour from "@/components/PageFour";
+import PageOne from "@/components/PageOne";
+import PageThree from "@/components/PageThree";
+import PageTwo from "@/components/PageTwo";
 
-
+// this is comment
 
 export default function Home() {
   return (
