@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { CiFacebook,CiYoutube  } from "react-icons/ci";
-import { FaInstagram,FaTiktok } from "react-icons/fa";
+import React, { useState } from "react";
+import { CiFacebook, CiYoutube } from "react-icons/ci";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
+
 const PageFive = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    phone:'',
+    name: "",
+    email: "",
+    message: "",
+    phone: "",
   });
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -20,27 +21,26 @@ const PageFive = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus('');
-    setError('');
+    setStatus("");
+    setError("");
 
     try {
-      console.log(formData)
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const result = await response.json();
       if (response.ok) {
-        setStatus('Email sent successfully!');
-        setFormData({ name: '', email: '', message: '' }); // Reset form
+        setStatus("Email sent successfully!");
+        setFormData({ name: "", email: "", message: "", phone: "" }); // Reset form
       } else {
         setError(`Failed to send email: ${result.message}`);
       }
     } catch (err) {
-      setError('Error sending email. Please try again later.');
-      console.error('Error:', err);
+      setError("Error sending email. Please try again later.");
+      console.error("Error:", err);
     } finally {
       setLoading(false);
     }
@@ -48,10 +48,37 @@ const PageFive = () => {
 
   return (
     <div className="flex flex-col items-center w-full bg-[#2b2b2b] min-h-screen text-white p-10">
-      <h1 className="text-5xl font-extrabold font-chapFont pb-4">Let the Magic Begin!</h1>
+      {/* Heading Section */}
+      <div className="text-center mb-10">
+        <h1 className="text-4xl sm:text-5xl font-extrabold font-chapFont pb-2">
+          Wanna see magic happen at your event?
+        </h1>
+        <p className="text-lg sm:text-xl font-medium text-gray-300">
+          Fill up the form below to send a message, Luis will get back to you within 24 hours. Or make a call to chat right now.
+        </p>
+      </div>
+
       {/* Contact Form Section */}
       <div className="w-full max-w-3xl bg-[#1f2a38] p-8 rounded-lg shadow-lg mb-12">
-        <h2 className="text-3xl font-bold mb-6 text-center font-chapFont">Contact Me/Give a call</h2>
+        {/* Buttons */}
+        <div className="flex justify-between items-center mb-6">
+          <button
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+            onClick={() => (window.location.href = "mailto:luisshrestha2@gmail.com")}
+          >
+            Send Email
+          </button>
+          <button
+            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
+            onClick={() => (window.location.href = "tel:+9779869375735")}
+          >
+            Call Me
+          </button>
+        </div>
+
+        <h2 className="text-3xl font-bold mb-6 text-center font-chapFont">
+          Contact Me/Give a call
+        </h2>
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Name Field */}
           <div>
@@ -84,7 +111,6 @@ const PageFive = () => {
               onWheel={(e) => e.target.blur()}
             />
           </div>
-
           {/* Email Field */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -100,7 +126,6 @@ const PageFive = () => {
               required
             />
           </div>
-
           {/* Message Field */}
           <div>
             <label htmlFor="message" className="block text-sm font-medium mb-2">
@@ -116,14 +141,13 @@ const PageFive = () => {
               required
             ></textarea>
           </div>
-
           {/* Submit Button */}
           <button
             type="submit"
             className={`w-full text-white font-semibold p-3 rounded-lg transition duration-300 ${
               loading
-                ? 'bg-gray-600 cursor-not-allowed'
-                : 'bg-blue-600 hover:bg-blue-700'
+                ? "bg-gray-600 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700"
             }`}
             disabled={loading}
           >
@@ -152,7 +176,7 @@ const PageFive = () => {
                 Sending...
               </span>
             ) : (
-              'Submit'
+              "Submit"
             )}
           </button>
         </form>
@@ -166,15 +190,15 @@ const PageFive = () => {
         <div className="flex justify-center gap-8 text-2xl">
           {/* Social Media Links */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/magicbyluis"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-300"
           >
-           <CiFacebook />
+            <CiFacebook />
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://www.tiktok.com/@magicbyluis"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-400 transition duration-300"
@@ -182,15 +206,15 @@ const PageFive = () => {
             <FaTiktok />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/magicbyluis"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-500 transition duration-300"
           >
-           <FaInstagram />
+            <FaInstagram />
           </a>
           <a
-            href="https://youtube.com"
+            href="https://www.youtube.com/@magicbyluis"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-700 transition duration-300"
@@ -202,10 +226,10 @@ const PageFive = () => {
         {/* Email or Phone Contact */}
         <div className="mt-8">
           <p className="text-lg">
-            <strong>Email:</strong> contact@example.com
+            <strong>Email:</strong> luisshrestha2@gmail.com
           </p>
           <p className="text-lg">
-            <strong>Phone:</strong> +123 456 7890
+            <strong>Phone:</strong> +977 9869375735
           </p>
         </div>
       </div>
