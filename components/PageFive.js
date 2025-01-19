@@ -48,9 +48,10 @@ const PageFive = () => {
 
   return (
     <div className="flex flex-col items-center w-full bg-[#2b2b2b] min-h-screen text-white p-10">
+      <h1 className="text-5xl font-extrabold font-chapFont pb-4">Let the Magic Begin!</h1>
       {/* Contact Form Section */}
       <div className="w-full max-w-3xl bg-[#1f2a38] p-8 rounded-lg shadow-lg mb-12">
-        <h2 className="text-3xl font-bold mb-6 text-center font-chapFont">Contact Me</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center font-chapFont">Contact Me/Give a call</h2>
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Name Field */}
           <div>

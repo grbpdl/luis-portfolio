@@ -29,7 +29,7 @@ const PageOne = () => {
               </div>
 
               {/* Dynamic Image */}
-              <div className="relative flex items-center justify-center leading-none w-[20vw] h-[50vw] md:w-[10vw] md:h-[25vw] pr-2 pl-2">
+              <div className="relative flex items-center justify-center leading-none w-[20vw] h-[52vw] md:w-[10vw] md:h-[27vw] pr-2 pl-2">
                 <Image
                   src={imageSource}
                   alt="Dynamic Letter I"
@@ -48,7 +48,7 @@ const PageOne = () => {
           {/* Responsive Text Below */}
           <div className="flex justify-center relative bottom-7 w-full md:bottom-12">
             <p
-              className="font-rubikGlitch text-black m-0 p-0 text-6xl md:text-9xl"
+              className="font-rubikGlitch text-black m-0 p-0 text-6xl md:text-8xl lg:text-9xl"
               style={{
                 textShadow:
                   "0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.4)",

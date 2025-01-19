@@ -6,9 +6,9 @@ const PageTwo = () => {
   return (
     <div className="w-full bg-[#2b2b2b] min-h-screen flex flex-col items-center relative p-8">
       {/* Paragraph Section */}
-      <div className="px-6 py-8 text-center">
+      <div className="px-12 py-8 text-center">
         <p
-          className="text-white mx-auto"
+          className="text-white mx-auto text-center md:text-2xl lg:text-3xl"
           style={{
             fontFamily: "Chap-Regular",
             fontWeight: 500,
