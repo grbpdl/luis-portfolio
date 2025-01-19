@@ -48,7 +48,7 @@ const PageFour = () => {
           <p className="font-chapFont text-xl leading-relaxed">
           Luis&apos;s stage show is a captivating blend of skill and mystery, with a high degree of audience interaction. He invites countless audience members to participate both from their seats and on stage. His performances, which combine a range of skills with an air of mystery, are suitable for groups of 15 to 1,000 people and can last anywhere from 10 minutes to an hour.
           </p>
-          <ImageCarousel img1={"/photos/image_17.jpg"} img2={"/photos/image_15.jpg"} img3={"/photos/image_16.jpg"}/>
+          <ImageCarousel img1={"/photos/stage1.jpg"} img2={"/photos/stage2.jpg"} img3={"/photos/stage3.jpg"}/>
         </div>
         <div className="flex flex-col gap-6">
           <h2 className="text-3xl font-semibold font-chapFont">Strolling & Close-Up Magic
@@ -56,7 +56,7 @@ const PageFour = () => {
           <p className="font-chapFont text-xl leading-relaxed">
           Luis&apos;s strolling magic is ideal for events that demand seamless entertainment, such as restaurants, corporate gatherings, and cocktail hours. He effortlessly captivates small groups with his impressive magic, creating a moment to remember. In more intimate settings, Luis can also present a close-up magic show, ensuring that every guest is fully engaged. As a master sleight-of-hand artist, Luis leaves a lasting impression, whether performing up close or mingling with the crowd, giving guests a moment to remember.
           </p>
-          <ImageCarousel img1={"/photos/image_17.jpg"} img2={"/photos/image_15.jpg"} img3={"/photos/image_16.jpg"}/>
+          <ImageCarousel img1={"/photos/closeup2.jpg"} img2={"/photos/closeup1.jpg"} img3={"/photos/closeup3.jpg"}/>
         </div>
 
 

@@ -7,7 +7,7 @@ const PageThree = () => {
   <div className="bg-[#2b2b2b] h-screen mx-auto w-full max-w-screen-xl px-2.5 md:px-20 mt-[30px] relative">
   <div className="relative h-[80%] w-full">
   <div className="absolute inset-0 rounded-xl">
-   <Image src="/photos/image_8.jpg" alt="image" fill className="object-cover aspect-auto opacity-50 z-0 rounded-3xl"/>
+   <Image src="/photos/audience.jpg" alt="image" fill className="object-cover aspect-auto opacity-50 z-0 rounded-3xl"/>
    </div>
   </div>
   <div className="absolute inset-0 px-6 md:px-10 w-[80%] mx-auto lg:mx-0 lg:w-full">
@@ -30,7 +30,7 @@ const PageThree = () => {
      </div>
       <div className="row-span-2 col-start-2 row-start-1 hidden lg:block">
         <div className="flex items-center justify-center">
-        <Image src="/overlay.png" alt="image" width={450} height={450}/>
+        <Image src="/overlay.png" alt="image" width={500} height={500}/>
         </div>
       </div>
     </div>
