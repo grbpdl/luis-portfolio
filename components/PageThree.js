@@ -15,13 +15,13 @@ const PageThree = () => {
      <div className="flex flex-col items-start lg:ml-[80px] gap-3">
      <div className="text-white font-bold text-[30px] md:text-[50px] font-chapFont ">The Performer</div>
      <div className="text-white">
-     <p className="mb-6 text-[15px] md:text-[20px] font-chapFont">
+     <p className="mb-6 text-[2.25vh] md:text-[20px] font-chapFont">
      Luis spent most of his adulthood locked in a room, practicing magic. Now, he presents the skills he acquired in that room in a highly entertaining and unique way, often playing the character of the person he wishes to be in real life.
     
       </p>
 
-     <p className="text-[15px] md:text-[20px] font-chapFont">
-     Recognized as Nepal&apos;s finest sleight of hand artist, Luis quickly became the president of the Nepali Brotherhood of Magicians, the country&apos;s only organization dedicated to magicians.His passion for the craft has fostered a strong sense of responsibility toward shaping the future of magic and live performances in Nepal.
+     <p className="text-[2.25vh] md:text-[20px] font-chapFont">
+     Recognized as Nepal&apos;s finest sleight of hand artist, Luis quickly became the president of the Nepali Brotherhood of Magicians, the countrys only organization dedicated to magicians.His passion for the craft has fostered a strong sense of responsibility toward shaping the future of magic and live performances in Nepal.
       </p>
      </div>
      </div>
