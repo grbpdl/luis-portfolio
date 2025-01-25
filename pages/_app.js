@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { Anton, Rubik_Glitch, Rubik_Vinyl } from "next/font/google";
-import {  Head } from "next/document";
 const anton = Anton({
   subsets: ["latin"],
   weight: ["400"],
