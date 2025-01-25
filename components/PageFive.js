@@ -50,10 +50,10 @@ const PageFive = () => {
     <div className="flex flex-col items-center w-full bg-[#2b2b2b] min-h-screen text-white p-10">
       {/* Heading Section */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl sm:text-5xl font-extrabold font-chapFont pb-2">
+        <h1 className="text-4xl sm:text-5xl font-bold font-chapFont pb-2">
           Wanna see magic happen at your event?
         </h1>
-        <p className="text-lg sm:text-xl font-medium text-gray-300">
+        <p className="text-lg sm:text-xl font-medium text-gray-300 font-chapFont">
           Fill up the form below to send a message, Luis will get back to you within 24 hours. Or make a call to chat right now.
         </p>
       </div>
@@ -61,23 +61,23 @@ const PageFive = () => {
       {/* Contact Form Section */}
       <div className="w-full max-w-3xl bg-[#1f2a38] p-8 rounded-lg shadow-lg mb-12">
         {/* Buttons */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center mb-6 gap-10">
           <button
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+            className="bg-blue-600 text-white sm:mx-2 px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
             onClick={() => (window.location.href = "mailto:luisshrestha2@gmail.com")}
           >
             Send Email
           </button>
           <button
-            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
+            className="bg-green-600 text-white  sm:mx-2  px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
             onClick={() => (window.location.href = "tel:+9779869375735")}
           >
-            Call Me
+            Make a Call
           </button>
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-center font-chapFont">
-          Contact Me/Give a call
+          Message
         </h2>
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Name Field */}
@@ -186,8 +186,8 @@ const PageFive = () => {
 
       {/* Social Media and Contacts Section */}
       <div className="w-full max-w-3xl text-center">
-        <h2 className="text-3xl font-bold mb-6 font-chapFont">Connect with Me</h2>
-        <div className="flex justify-center gap-8 text-2xl">
+        {/* <h2 className="text-3xl font-bold mb-6 font-chapFont">Connect with Me</h2> */}
+        <div className="flex justify-center gap-8 text-2xl font-chapFont">
           {/* Social Media Links */}
           <a
             href="https://www.facebook.com/magicbyluis"

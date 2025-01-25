@@ -6,15 +6,15 @@ const PageTwo = () => {
   return (
     <div className="w-full bg-[#2b2b2b] min-h-screen flex flex-col items-center relative p-8">
       {/* Paragraph Section */}
-      <div className="px-12 py-8 text-center">
+      <div className="py-8 text-center sm:text-justify">
         <p
-          className="text-white mx-auto text-center md:text-2xl lg:text-3xl"
-          style={{
-            fontFamily: "Chap-Regular",
-            fontWeight: 500,
-            fontSize: "1.5rem",
-            lineHeight: "1.6",
-          }}
+          className="text-white mx-auto text-center text-[2.25vh] md:text-[20px] font-chapFont md:text-2xl lg:text-4xl"
+          // style={{
+          //   fontFamily: "Chap-Regular",
+          //   fontWeight: 500,
+          //   fontSize: "1.5 rem",
+          //   lineHeight: "1.6",
+          // }}
         >
           Luis&apos;s signature style blends masterful sleight of hand, magic,
           mentalism, improv comedy, and dynamic audience interaction into a
